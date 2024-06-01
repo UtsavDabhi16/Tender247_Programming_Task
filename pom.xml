@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- Root element of the POM file -->
+    <modelVersion>4.0.0</modelVersion> <!-- Specifies the POM model version -->
+
+    <!-- Parent project information -->
+    <parent>
+        <groupId>org.springframework.boot</groupId> <!-- Parent group ID -->
+        <artifactId>spring-boot-starter-parent</artifactId> <!-- Parent artifact ID -->
+        <version>3.3.0</version> <!-- Parent version -->
+        <relativePath/> <!-- Lookup parent from the repository -->
+    </parent>
+
+    <!-- Project information -->
+    <groupId>com.tender</groupId> <!-- Group ID of the project -->
+    <artifactId>Tender247_Programming_Task</artifactId> <!-- Artifact ID of the project -->
+    <version>0.0.1-SNAPSHOT</version> <!-- Version of the project -->
+    <name>Tender247_Programming_Task</name> <!-- Name of the project -->
+    <description>Tender247_Programming_Task</description> <!-- Description of the project -->
+
+    <!-- Project properties -->
+    <properties>
+        <java.version>17</java.version> <!-- Java version used by the project -->
+    </properties>
+
+    <!-- Project dependencies -->
+    <dependencies>
+        <!-- Spring Boot dependencies -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- MySQL Connector dependency -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+
+        <!-- Bean Validation API dependency -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
+
+        <!-- Lombok dependency -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.32</version>
+            <scope>provided</scope> <!-- Scope provided to avoid packaging Lombok in the final JAR -->
+        </dependency>
+
+        <!-- Spring Boot test dependency -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope> <!-- Scope set to test for testing purposes -->
+        </dependency>
+    </dependencies>
+
+    <!-- Build configuration -->
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven plugin for packaging and running the application -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
